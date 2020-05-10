@@ -1,0 +1,33 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: crnk-spring-boot
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/crnk-university
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+crnk:
+  enabled: true
+  domain-name: http://localhost:8080
+  path-prefix: /api
+  default-page-limit: 10
+  max-page-limit: 100
+  allow-unknown-attributes: false
+  return404-on-null: false
+  security:
+    enabled: false
+  jpa:
+    enabled: false
+  spring:
+    mvc: true
+  ui:
+    enabled: false
+  config:
+    serialize:
+      object:
+        links: true
