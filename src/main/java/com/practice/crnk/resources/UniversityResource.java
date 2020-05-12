@@ -19,7 +19,8 @@ import static com.practice.crnk.resources.UniversityResource.RESOURCE_TYPE;
  */
 @Data
 @NoArgsConstructor
-@JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH, sortable = true, filterable = true)
+@JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH, sortable = true, filterable = true,
+patchable = true)
 public class UniversityResource {
 
     public static final String RESOURCE_TYPE = "university";

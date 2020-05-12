@@ -11,9 +11,11 @@ spring:
     password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
+  aop:
+    auto: false
+
 crnk:
   enabled: true
-  domain-name: http://localhost:8080
   path-prefix: /api
   default-page-limit: 10
   max-page-limit: 100
