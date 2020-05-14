@@ -14,5 +14,15 @@
     <groupId>com.practice.client</groupId>
     <artifactId>crnk-spring-boot-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.practice.api</groupId>
+            <artifactId>crnk-spring-boot-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>
