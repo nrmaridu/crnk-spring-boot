@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.practice</groupId>
-    <artifactId>crnk-spring-boot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+
     <name>crnk-spring-boot</name>
     <description>Crnk sample spring boot application</description>
+    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>crnk-spring-boot</artifactId>
+    <groupId>com.practice</groupId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>api</module>
+        <module>client</module>
+        <module>service</module>
+    </modules>
 
     <properties>
         <java.version>11</java.version>
@@ -33,39 +43,10 @@
         </repository>
     </repositories>
 
+    <dependencyManagement>
+    </dependencyManagement>
+
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jooq</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.2.6.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.crnk/crnk-core -->
         <dependency>
@@ -73,28 +54,6 @@
             <artifactId>crnk-core</artifactId>
             <version>${crnk.version}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.crnk/crnk-setup-spring-boot2 -->
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-setup-spring-boot2</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.crnk/crnk-gen-openapi -->
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-gen-openapi</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.crnk/crnk-gen-openapi -->
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-gen-java</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
@@ -118,6 +77,35 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <!--<executions>
+                        <execution>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>add-source</goal>
+                            </goals>
+                            <configuration>
+                                <sources>
+                                    <source>target/generated-sources/annotations</source>
+                                </sources>
+                            </configuration>
+                        </execution>
+                    </executions>-->
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <!--<build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -145,6 +133,6 @@
 
         </plugins>
 
-    </build>
+    </build>-->
 
 </project>
