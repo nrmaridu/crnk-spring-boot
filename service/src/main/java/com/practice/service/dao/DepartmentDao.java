@@ -14,7 +14,7 @@ import com.practice.service.jooq.DepartmentJooq;
  * @since May 09, 2020
  */
 @Repository
-public class DepartmentDao {
+public class DepartmentDao implements AbstractDao<DepartmentResource, UUID> {
 
     private final DepartmentJooq departmentJooq = DepartmentJooq.INSTANCE;
 
@@ -25,6 +25,7 @@ public class DepartmentDao {
     }
 
 
+    @Override
     public DepartmentResource findOne(UUID id) {
         return jooq.build()
             .select(departmentJooq.id,
@@ -36,6 +37,7 @@ public class DepartmentDao {
             .into(DepartmentResource.class);
     }
 
+    @Override
     public List<DepartmentResource> findAll() {
         return jooq.build()
             .select(departmentJooq.id,
@@ -46,6 +48,7 @@ public class DepartmentDao {
             .into(DepartmentResource.class);
     }
 
+    @Override
     public DepartmentResource create(DepartmentResource resource) {
         return jooq.build()
             .insertInto(departmentJooq.departmentTable)
@@ -57,6 +60,12 @@ public class DepartmentDao {
             .into(DepartmentResource.class);
     }
 
+    @Override
+    public DepartmentResource save(DepartmentResource resource) {
+        return null;
+    }
+
+    @Override
     public int delete(UUID id) {
         return jooq.build()
             .deleteFrom(departmentJooq.departmentTable)

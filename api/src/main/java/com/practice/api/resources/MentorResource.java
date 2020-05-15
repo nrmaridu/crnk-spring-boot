@@ -2,6 +2,8 @@ package com.practice.api.resources;
 
 import java.util.UUID;
 
+import com.practice.api.resources.base.ApiResource;
+
 import io.crnk.core.resource.annotations.JsonApiField;
 import io.crnk.core.resource.annotations.JsonApiId;
 import io.crnk.core.resource.annotations.JsonApiRelation;
@@ -22,7 +24,7 @@ import static com.practice.api.resources.MentorResource.RESOURCE_TYPE;
 @Setter
 @NoArgsConstructor
 @JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH)
-public class MentorResource {
+public class MentorResource extends ApiResource {
 
     public static final String RESOURCE_TYPE = "mentor";
     public static final String RESOURCE_PATH = "mentors";

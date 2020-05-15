@@ -40,6 +40,22 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.jooq/jool -->
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jool</artifactId>
+            <version>0.9.14</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.simpleflatmapper/sfm-jdbc -->
+        <dependency>
+            <groupId>org.simpleflatmapper</groupId>
+            <artifactId>sfm-jdbc</artifactId>
+            <version>8.2.3</version>
+        </dependency>
+
+
+
         <!-- https://mvnrepository.com/artifact/io.crnk/crnk-setup-spring-boot2 -->
         <dependency>
             <groupId>io.crnk</groupId>

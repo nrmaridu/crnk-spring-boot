@@ -1,14 +1,13 @@
-package com.practice.crnk.service;
+package com.practice.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//@EnableAspectJAutoProxy
 public class CrnkSpringBootApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CrnkSpringBootApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CrnkSpringBootApplication.class, args);
+    }
 
 }

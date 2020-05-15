@@ -30,4 +30,6 @@ public class CourseJooq {
     private CourseJooq() {
         // Enforce singleton
     }
+
+
 }

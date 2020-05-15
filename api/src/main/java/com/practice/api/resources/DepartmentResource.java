@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.practice.api.resources.base.ApiResource;
 
 import io.crnk.core.resource.annotations.JsonApiField;
 import io.crnk.core.resource.annotations.JsonApiId;
@@ -25,7 +26,7 @@ import static com.practice.api.resources.DepartmentResource.RESOURCE_TYPE;
 @Setter
 @NoArgsConstructor
 @JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH)
-public class DepartmentResource {
+public class DepartmentResource extends ApiResource {
 
     public static final String RESOURCE_TYPE = "department";
     public static final String RESOURCE_PATH = "departments";

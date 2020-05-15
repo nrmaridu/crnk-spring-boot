@@ -3,11 +3,12 @@ package com.practice.api.resources;
 import java.util.List;
 import java.util.UUID;
 
+import com.practice.api.resources.base.ApiResource;
+
 import io.crnk.core.resource.annotations.JsonApiField;
 import io.crnk.core.resource.annotations.JsonApiId;
 import io.crnk.core.resource.annotations.JsonApiRelation;
 import io.crnk.core.resource.annotations.JsonApiResource;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import static com.practice.api.resources.UniversityResource.RESOURCE_PATH;
@@ -17,11 +18,9 @@ import static com.practice.api.resources.UniversityResource.RESOURCE_TYPE;
  * @author nrmaridu
  * @since May 08, 2020
  */
-@Data
 @NoArgsConstructor
-@JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH, sortable = true, filterable = true,
-    patchable = true)
-public class UniversityResource {
+@JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH)
+public class UniversityResource extends ApiResource {
 
     public static final String RESOURCE_TYPE = "university";
     public static final String RESOURCE_PATH = "universities";
@@ -29,7 +28,7 @@ public class UniversityResource {
     @JsonApiId
     private UUID id;
 
-    @JsonApiField(filterable = true, sortable = true)
+    @JsonApiField
     private String name;
 
     @JsonApiRelation
