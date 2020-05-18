@@ -9,6 +9,7 @@ import io.crnk.core.resource.annotations.JsonApiField;
 import io.crnk.core.resource.annotations.JsonApiId;
 import io.crnk.core.resource.annotations.JsonApiRelation;
 import io.crnk.core.resource.annotations.JsonApiResource;
+import io.crnk.core.resource.annotations.LookupIncludeBehavior;
 import lombok.NoArgsConstructor;
 
 import static com.practice.api.resources.UniversityResource.RESOURCE_PATH;
@@ -18,7 +19,6 @@ import static com.practice.api.resources.UniversityResource.RESOURCE_TYPE;
  * @author nrmaridu
  * @since May 08, 2020
  */
-@NoArgsConstructor
 @JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH)
 public class UniversityResource extends ApiResource {
 
@@ -31,8 +31,11 @@ public class UniversityResource extends ApiResource {
     @JsonApiField
     private String name;
 
-    @JsonApiRelation
+    @JsonApiRelation(lookUp = LookupIncludeBehavior.AUTOMATICALLY_WHEN_NULL, mappedBy = "university")
     private List<DepartmentResource> departments;
+
+    public UniversityResource() {
+    }
 
     public UniversityResource(UUID id, String name) {
         this.id = id;

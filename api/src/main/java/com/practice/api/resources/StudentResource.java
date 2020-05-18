@@ -42,6 +42,9 @@ public class StudentResource extends ApiResource {
     @JsonApiRelation(idField = "courseIds")
     private List<CourseResource> courses;
 
+    public StudentResource() {
+    }
+
     public StudentResource(UUID id, String name, UUID universityId, List<UUID> courseIds) {
         this.id = id;
         this.name = name;

@@ -22,9 +22,6 @@ import static com.practice.api.resources.DepartmentResource.RESOURCE_TYPE;
  * @author nrmaridu
  * @since May 08, 2020
  */
-@Getter
-@Setter
-@NoArgsConstructor
 @JsonApiResource(type = RESOURCE_TYPE, resourcePath = RESOURCE_PATH)
 public class DepartmentResource extends ApiResource {
 
@@ -47,9 +44,52 @@ public class DepartmentResource extends ApiResource {
     @JsonApiRelation
     private List<MentorResource> mentors;
 
+    public DepartmentResource() {
+    }
+
     public DepartmentResource(UUID id, String name, UUID universityId) {
         this.id = id;
         this.name = name;
         this.universityId = universityId;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public UUID getUniversityId() {
+        return universityId;
+    }
+
+    public void setUniversityId(UUID universityId) {
+        this.universityId = universityId;
+    }
+
+    public UniversityResource getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(UniversityResource university) {
+        this.university = university;
+    }
+
+    public List<MentorResource> getMentors() {
+        return mentors;
+    }
+
+    public void setMentors(List<MentorResource> mentors) {
+        this.mentors = mentors;
     }
 }
