@@ -22,13 +22,11 @@
         <dependency>
             <groupId>io.crnk</groupId>
             <artifactId>crnk-gen-openapi</artifactId>
-            <version>${crnk.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.crnk</groupId>
             <artifactId>crnk-gen-java</artifactId>
-            <version>${crnk.version}</version>
         </dependency>
 
     </dependencies>

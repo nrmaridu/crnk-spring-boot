@@ -44,6 +44,16 @@
     </repositories>
 
     <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.crnk</groupId>
+                <artifactId>crnk-bom</artifactId>
+                <version>${crnk.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+
     </dependencyManagement>
 
     <dependencies>
@@ -52,7 +62,6 @@
         <dependency>
             <groupId>io.crnk</groupId>
             <artifactId>crnk-core</artifactId>
-            <version>${crnk.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
