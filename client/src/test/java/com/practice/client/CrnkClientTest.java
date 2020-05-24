@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import io.crnk.core.repository.ResourceRepository;
  * @author nrmaridu
  * @since May 18, 2020
  */
+@Disabled
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {CrnkClientConfiguration.class})
 public class CrnkClientTest {

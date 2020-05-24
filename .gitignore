@@ -32,3 +32,5 @@ build/
 
 ### Ds store files ###
 *..DS_Store
+
+.idea

@@ -1,7 +1,6 @@
 package com.practice.client.config;
 
 import java.time.Duration;
-import java.util.function.Supplier;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

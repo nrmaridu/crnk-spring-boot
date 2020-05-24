@@ -33,6 +33,7 @@
 
     <build>
         <plugins>
+            <!-- Adds crnk generated querySpec and PathSpec classes to source directory-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>

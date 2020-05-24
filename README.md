@@ -1,7 +1,7 @@
 ![Java CI with Maven](https://github.com/NageswaraRaoMaridu/crnk-spring-boot/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master&event=push)
 
 # crnk-spring-boot
-Crnk integration with spring boot application to provide json:api compatible API
+Spring boot application to provide json:api compatible API using CRNK framework.
 
 #### What is JSON:API ?
 ```JSON:API is a specification for how a client should request the resources to be fetched or modified, and how a server should respond to those requests```
